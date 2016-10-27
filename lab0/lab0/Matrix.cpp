@@ -27,23 +27,6 @@ double CMatrix::CalcMinor(size_t iPos, size_t jPos)
 	return det;
 }
 
-void CMatrix::printMatrix()
-{
-	printMatrix(m_matrix);
-}
-
-void CMatrix::printMatrix(const Matrix & matrix)
-{
-	for (size_t i = 0; i < matrix.size(); i++)
-	{
-		for (size_t j = 0; j < matrix.size(); j++)
-		{
-			cout << matrix[i][j] << " ";
-		}
-		cout << endl;
-	}
-}
-
 double CMatrix::CalcDet(Matrix matrix)
 {
 	//Методом гаусса
