@@ -1,13 +1,14 @@
 #pragma once
-#include <vector>
-using Matrix = std::vector<std::vector<double>>;
+#include "Definitions.h"
 
 class CMatrix
 {
 public:
-	CMatrix(Matrix && matrix);
+	CMatrix(Matrix matrix);
 	~CMatrix();
 	double CalcAlgebraicAddition(size_t iPos, size_t jPos);
+
+	size_t GetSize()const;
 private:
 	double CalcMinor(size_t iPos, size_t jPos);
 	double CalcDet(Matrix matrix);
@@ -15,4 +16,3 @@ private:
 
 	Matrix m_matrix;
 };
-

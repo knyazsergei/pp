@@ -2,8 +2,8 @@
 #include "Matrix.h"
 
 
-CMatrix::CMatrix(Matrix && matrix) :
-	m_matrix(std::move(matrix))
+CMatrix::CMatrix(Matrix matrix) :
+	m_matrix(matrix)
 {
 }
 
@@ -16,6 +16,11 @@ double CMatrix::CalcAlgebraicAddition(size_t iPos, size_t jPos)
 {
 	auto det = CalcMinor(iPos, jPos);
 	return static_cast<double>(std::pow(-1, iPos + jPos + 2));
+}
+
+size_t CMatrix::GetSize()const
+{
+	return m_matrix.size();
 }
 
 double CMatrix::CalcMinor(size_t iPos, size_t jPos)
