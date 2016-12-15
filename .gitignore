@@ -255,7 +255,6 @@ paket-files/
 *.opendb
 *.filters
 *.user
-*.vcxproj
 /Debug
 /Release
 /x64
